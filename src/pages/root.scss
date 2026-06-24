@@ -1,18 +1,18 @@
 .root-body {
   display: flex;
-  background-color: aqua;
   flex: 1 0 100%;
 
   .Navbar {
     display: flex;
+    height: 100vh;
     flex-direction: column;
     width: 300px;
     border: 3px solid gray;
     border-radius: 8px;
-    justify-content: center;
     align-items: center;
     padding: 0.5rem;
     gap: 0.2rem;
+    background-color: gray;
 
     &__Link {
       display: flex;
