@@ -18,6 +18,11 @@
   gap: 0.2rem;
   background-color: gray;
 
+  &__logo {
+    width: 300px;
+    margin-bottom: 1rem;
+  }
+
   &__Link {
     display: flex;
     width: 100%;
