@@ -5,7 +5,9 @@ function Root() {
   return (
     <div className="root">
       <nav className="Navbar">
-        <img className="Navbar__logo" src="public/logo.png" alt="logo" />
+        <div className="Navbar__logo-container">
+          <img className="Navbar__logo" src="public/logo.png" alt="logo" />
+        </div>
         <Link className="Navbar__Link" to="overview">
           <button className="Navbar__Button">Übersicht</button>
         </Link>

@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Overview from "./pages/overview/Overview";
-import Edit from "./pages/Profil/Edit";
-import Create from "./pages/Profil/Create";
+import ProfilEdit from "./pages/Profil/ProfilEdit";
+import ProfilCreate from "./pages/Profil/ProfilCreate";
 import ErrorPage from "./pages/error/ErrorPage";
 import Root from "./pages/root";
 
@@ -15,8 +15,8 @@ function App() {
       children: [
         { path: "", element: <Overview /> },
         { path: "Overview", element: <Overview /> },
-        { path: "Create", element: <Create /> },
-        { path: "Edit/:itemId", element: <Edit /> },
+        { path: "Create", element: <ProfilCreate /> },
+        { path: "Edit/:itemId", element: <ProfilEdit /> },
       ],
     },
   ]);
