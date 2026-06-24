@@ -1,0 +1,19 @@
+.Input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  // max-width: 250px;
+
+  &__label {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  &__field {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 6px;
+    width: 100%;
+  }
+}
