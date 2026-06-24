@@ -3,7 +3,7 @@ import "./root.scss";
 
 function Root() {
   return (
-    <div className="root-body">
+    <div className="root">
       <nav className="Navbar">
         <Link className="Navbar__Link" to="overview">
           <button className="Navbar__Button">Übersicht</button>
@@ -12,7 +12,7 @@ function Root() {
           <button className="Navbar__Button">Erstellen</button>
         </Link>
       </nav>
-      <main className="main-content">
+      <main className="root__main-content">
         <Outlet />
       </main>
     </div>
