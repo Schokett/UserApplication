@@ -34,8 +34,8 @@ function ProfilCreate() {
       <div className="page-banner">
         <img src={logo} alt="test" style={{ width: "200px" }} />
         <div className="page-banner__text-wrapper">
-          <span className="page-banner__title">Benutzerprofil</span>
-          <span className="page-banner__sub-title">Erstellen Sie ein Benutzerkonto</span>
+          <span className="page-banner__title">128</span>
+          <span className="page-banner__sub-title">Angelegte benutzer</span>
         </div>
       </div>
       <div className="create-form">

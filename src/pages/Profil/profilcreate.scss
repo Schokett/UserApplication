@@ -22,10 +22,13 @@
   }
   &__title {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 3rem;
+    // color: #2a6bfd;
   }
   &__sub-title {
-    font-weight: 300;
+    color: rgb(197, 197, 197);
+    font-weight: 500;
+    font-size: 2rem;
   }
 }
 
