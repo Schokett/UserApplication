@@ -1,41 +1,78 @@
 .card {
-  width: auto;
-  max-height: 12rem;
-  background-color: #d1d1d1;
-  border-radius: 18px;
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  padding: 1.25rem;
   display: flex;
-  flex: 1 auto;
+  max-height: 12rem;
+  gap: 1rem;
+  align-items: flex-start;
+  box-shadow:
+    rgba(122, 122, 122, 0.16) 0px 3px 6px,
+    rgba(122, 122, 122, 0.16) 0px 3px 6px;
 
   &__username {
-    margin: 1.5rem 0 0 0;
+    margin: 1.5rem 0 0.5rem 0;
   }
 
   &__image-wrapper {
     align-self: center;
     margin: 1rem;
     flex-shrink: 0;
-    width: 154px;
-    height: 154px;
+    width: 112px;
+    height: 112px;
   }
 
-  &__image {
-    width: 154px;
-    height: 154px;
-    min-width: 154px;
-    min-height: 154px;
-    max-width: 154px;
-    max-height: 154px;
+  &__image,
+  &__image-placeholder {
+    width: 112px;
+    height: 112px;
+    min-width: 112px;
+    min-height: 112px;
+    max-width: 112px;
+    max-height: 112px;
     border-radius: 8px;
     object-fit: cover;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  &__image-placeholder {
+    background: #c2c2c2;
+    color: #4a4a4a;
+    font-weight: 600;
+    font-size: 18px;
   }
 
   &__info {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // gap: 0.1rem;
+    // overflow: hidden;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
+    // padding-left: 1rem;
+    flex: 1;
+    min-width: 0;
+  }
+  &__detail-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.1rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 7px 12px;
+  }
+  &__detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #3a3a3a;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 }

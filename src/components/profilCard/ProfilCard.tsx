@@ -32,13 +32,14 @@ function ProfilCard({ user }: ProfilCardProps) {
 
       <div className="card__info">
         <h4 className="card__username">{user.username}</h4>
-        <div className="spacer"></div>
-        <span className="card__detail">{user.birthDate}</span>
-        <span className="card__detail">{user.address}</span>
-        <span className="card__detail">{user.gender}</span>
-        <span className="card__detail">{user.telefon}</span>
-        <span className="card__detail">{user.email}</span>
-        <span className="card__detail">{user.website}</span>
+        <div className="card__detail-grid">
+          <span className="card__detail">{user.birthDate}</span>
+          <span className="card__detail">{user.address}</span>
+          <span className="card__detail">{user.gender}</span>
+          <span className="card__detail">{user.telefon}</span>
+          <span className="card__detail">{user.email}</span>
+          <span className="card__detail">{user.website}</span>
+        </div>
       </div>
     </div>
   );
