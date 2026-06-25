@@ -5,7 +5,6 @@
   background-color: #e9effc;
 
   &__main-content {
-    // padding: 1rem;
     width: 100%;
   }
 }
@@ -55,7 +54,6 @@
     color: rgb(197, 197, 197);
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
   }
   &__app-version {
     color: rgba(197, 197, 197, 0.5);

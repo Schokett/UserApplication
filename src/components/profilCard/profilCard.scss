@@ -1,9 +1,11 @@
 .card {
   background-color: #d4d4d4;
   border-radius: 12px;
-  padding: 1.25rem;
-  display: flex;
-  max-height: 12rem;
+  padding: 0.5rem;
+  display: grid;
+  max-height: auto;
+  align-items: start;
+  grid-template-columns: 10rem 1fr;
   gap: 1rem;
   align-items: flex-start;
   box-shadow:
@@ -11,7 +13,8 @@
     rgba(122, 122, 122, 0.16) 0px 3px 6px;
 
   &__username {
-    margin: 1.5rem 0 0.5rem 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   &__image-wrapper {
@@ -46,13 +49,6 @@
   }
 
   &__info {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // gap: 0.1rem;
-    // overflow: hidden;
-    // white-space: nowrap;
-    // text-overflow: ellipsis;
-    // padding-left: 1rem;
     flex: 1;
     min-width: 0;
   }

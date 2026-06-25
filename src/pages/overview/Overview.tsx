@@ -15,7 +15,7 @@ interface User {
   profileImage: string | null;
 }
 
-const ITEMS_PER_PAGE = 4;
+const ITEMS_PER_PAGE = 6;
 
 function Overview() {
   const [users, setUsers] = useState<User[]>([]);
@@ -26,10 +26,8 @@ function Overview() {
     setUsers(storedUsers);
   }, []);
 
-  // Gesamtanzahl Seiten berechnen
   const totalPages = Math.ceil(users.length / ITEMS_PER_PAGE);
 
-  // Nur den Ausschnitt für die aktuelle Seite herausschneiden
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const currentUsers = users.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   return (
@@ -39,20 +37,22 @@ function Overview() {
         {currentUsers.map((user) => (
           <ProfilCard key={user.id} user={user} />
         ))}
-      </div>
 
-      <div className="pagination">
-        <button disabled={currentPage === 1} onClick={() => setCurrentPage((p) => p - 1)}>
-          Zurück
-        </button>
+        <div className="profilView-formPage__pagination">
+          <button disabled={currentPage === 1} onClick={() => setCurrentPage((p) => p - 1)}>
+            Zurück
+          </button>
 
-        <span>
-          Seite {currentPage} von {totalPages}
-        </span>
+          <span>
+            Seite {currentPage} von {totalPages}
+          </span>
 
-        <button disabled={currentPage === totalPages} onClick={() => setCurrentPage((p) => p + 1)}>
-          Weiter
-        </button>
+          <button
+            disabled={currentPage === totalPages}
+            onClick={() => setCurrentPage((p) => p + 1)}>
+            Weiter
+          </button>
+        </div>
       </div>
     </div>
   );
