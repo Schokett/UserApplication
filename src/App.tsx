@@ -17,7 +17,7 @@ function App() {
         { path: "", element: <Overview /> },
         { path: "Overview", element: <Overview /> },
         { path: "Create", element: <ProfilCreate /> },
-        { path: "Edit/:itemId", element: <ProfilEdit /> },
+        { path: "Edit/:id", element: <ProfilEdit /> },
         { path: "help", element: <Help /> },
       ],
     },

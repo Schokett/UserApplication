@@ -1,4 +1,4 @@
-.create-formPage {
+.edit-formPage {
   background-color: #fefefe;
   border-radius: 8px;
   padding: 2.5rem;
@@ -9,7 +9,6 @@
   min-height: 0;
   overflow: auto;
 }
-
 .form {
   display: Grid;
   gap: 2rem;
@@ -31,5 +30,6 @@
     color: white;
     border: none;
     padding: 1rem 3rem;
+    cursor: pointer;
   }
 }

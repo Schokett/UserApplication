@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Input from "../../components/input/Input";
 import Select from "../../components/select/Select";
-import "./profilcreate.scss";
+import "./profilCreate.scss";
 import Banner from "../../components/banner/Banner";
 import ImageUpload from "../../components/imageUpload/ImageUpload";
 import toast from "react-hot-toast";
@@ -103,7 +103,10 @@ function ProfilCreate() {
             onChange={setAddress}
             className="form__full-width"
           />
-          <ImageUpload value={profileImage} onChange={setProfileImage} />
+          <div className="form__img-upload">
+            <label className="Input__label">Profilbild</label>
+            <ImageUpload value={profileImage} onChange={setProfileImage} />
+          </div>
           <button className="form__btn" type="submit">
             Speichern
           </button>

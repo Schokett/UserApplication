@@ -13,11 +13,12 @@ interface User {
 }
 interface ProfilCardProps {
   user: User;
+  onClick?: () => void;
 }
 
-function ProfilCard({ user }: ProfilCardProps) {
+function ProfilCard({ user, onClick }: ProfilCardProps) {
   return (
-    <div className="card">
+    <div className="card" onClick={onClick}>
       <div className="card__image-wrapper">
         {user.profileImage ? (
           <img
