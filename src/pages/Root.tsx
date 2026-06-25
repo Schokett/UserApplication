@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import "./root.scss";
 import logo from "../assets/logo-light.png";
+import { Toaster } from "react-hot-toast";
 
 function Root() {
   return (
@@ -24,6 +25,12 @@ function Root() {
       <main className="root__main-content">
         <Outlet />
       </main>
+      <Toaster
+        position="top-center"
+        containerStyle={{
+          top: 60,
+        }}
+      />
     </div>
   );
 }

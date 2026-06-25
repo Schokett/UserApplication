@@ -4,6 +4,7 @@ import Select from "../../components/select/Select";
 import "./profilcreate.scss";
 import Banner from "../../components/banner/Banner";
 import ImageUpload from "../../components/imageUpload/ImageUpload";
+import toast from "react-hot-toast";
 
 function ProfilCreate() {
   const [username, setusername] = useState("");
@@ -14,6 +15,17 @@ function ProfilCreate() {
   const [telefon, setTelefon] = useState("");
   const [website, setWebsite] = useState("");
   const [profileImage, setProfileImage] = useState<string | null>(null);
+
+  const resetForm = () => {
+    setusername("");
+    setBirthDate("");
+    setGender("");
+    setemail("");
+    setAddress("");
+    setTelefon("");
+    setWebsite("");
+    setProfileImage(null);
+  };
 
   const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
@@ -33,7 +45,9 @@ function ProfilCreate() {
     const existingUsers = JSON.parse(localStorage.getItem("users") || "[]");
     const updatedUsers = [...existingUsers, newUser];
     localStorage.setItem("users", JSON.stringify(updatedUsers));
-    console.log("Gespeichert:", newUser);
+
+    resetForm();
+    toast.success(`${newUser.username} wurde erfolgreich angelegt`);
   };
 
   return (

@@ -31,32 +31,13 @@ function Overview() {
     <div className="page">
       <Banner title="128" subTitle="Angelegte User" />
       <div className="profilView-formPage">
-        <ProfilCard />
-        {/* <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard />
-        <ProfilCard /> */}
+        <div className="user-grid">
+          {currentUsers.map((user) => (
+            <ProfilCard key={user.id} user={user} />
+          ))}
+        </div>
       </div>
-      <div className="user-grid">
-        {currentUsers.map((user) => (
-          <ProfilCard key={user.id} user={user} />
-        ))}
-      </div>
+
       <div className="pagination">
         <button disabled={currentPage === 1} onClick={() => setCurrentPage((p) => p - 1)}>
           Zurück
