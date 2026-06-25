@@ -2,7 +2,8 @@ import { useState } from "react";
 import Input from "../../components/input/Input";
 import Select from "../../components/select/Select";
 import "./profilcreate.scss";
-import logo from "../../assets/logo.png";
+import Banner from "../../components/banner/Banner";
+import ImageUpload from "../../components/imageUpload/ImageUpload";
 
 function ProfilCreate() {
   const [username, setusername] = useState("");
@@ -12,11 +13,13 @@ function ProfilCreate() {
   const [address, setAddress] = useState("");
   const [telefon, setTelefon] = useState("");
   const [website, setWebsite] = useState("");
+  const [profileImage, setProfileImage] = useState<string | null>(null);
 
   const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
 
     const newUser = {
+      id: crypto.randomUUID(),
       username,
       birthDate,
       gender,
@@ -24,21 +27,19 @@ function ProfilCreate() {
       address,
       telefon,
       website,
+      profileImage,
     };
 
-    console.log(newUser);
+    const existingUsers = JSON.parse(localStorage.getItem("users") || "[]");
+    const updatedUsers = [...existingUsers, newUser];
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
+    console.log("Gespeichert:", newUser);
   };
 
   return (
     <div className="page">
-      <div className="page-banner">
-        <img src={logo} alt="test" style={{ width: "200px" }} />
-        <div className="page-banner__text-wrapper">
-          <span className="page-banner__title">128</span>
-          <span className="page-banner__sub-title">Angelegte benutzer</span>
-        </div>
-      </div>
-      <div className="create-form">
+      <Banner title="Erstellen" subTitle="Lege einen neuen User an" />
+      <div className="create-formPage">
         <form className="form" onSubmit={handleSubmit} noValidate>
           <Input
             label="Username"
@@ -48,7 +49,6 @@ function ProfilCreate() {
             onChange={setusername}
           />
           <Input label="Geburtsdatum" type="date" value={birthDate} onChange={setBirthDate} />
-          {/* hier selectFeld */}
           <Select
             label="Geschlecht"
             value={gender}
@@ -89,6 +89,7 @@ function ProfilCreate() {
             onChange={setAddress}
             className="form__full-width"
           />
+          <ImageUpload value={profileImage} onChange={setProfileImage} />
           <button className="form__btn" type="submit">
             Speichern
           </button>

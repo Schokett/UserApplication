@@ -1,0 +1,11 @@
+.profilView-formPage {
+  background-color: #fefefe;
+  border-radius: 8px;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  box-shadow: 2px 4px 10px rgb(235, 235, 235);
+  min-height: 0;
+  overflow: auto;
+}

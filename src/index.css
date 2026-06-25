@@ -11,3 +11,11 @@ body {
   padding: 0;
   height: 100%;
 }
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  margin: 2rem;
+  height: calc(100% - 4rem);
+}

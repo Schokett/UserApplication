@@ -1,4 +1,76 @@
+import { useEffect, useState } from "react";
+import Banner from "../../components/banner/Banner";
+import ProfilCard from "../../components/profilCard/ProfilCard";
+import "./overview.scss";
+
+interface User {
+  id: string;
+  username: string;
+  profileImage: string | null;
+  // ... weitere Felder
+}
+
+const ITEMS_PER_PAGE = 6;
+
 function Overview() {
-  return <div>Overview</div>;
+  const [users, setUsers] = useState<User[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    const storedUsers = JSON.parse(localStorage.getItem("users") || "[]");
+    setUsers(storedUsers);
+  }, []);
+
+  // Gesamtanzahl Seiten berechnen
+  const totalPages = Math.ceil(users.length / ITEMS_PER_PAGE);
+
+  // Nur den Ausschnitt für die aktuelle Seite herausschneiden
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const currentUsers = users.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  return (
+    <div className="page">
+      <Banner title="128" subTitle="Angelegte User" />
+      <div className="profilView-formPage">
+        <ProfilCard />
+        {/* <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard />
+        <ProfilCard /> */}
+      </div>
+      <div className="user-grid">
+        {currentUsers.map((user) => (
+          <ProfilCard key={user.id} user={user} />
+        ))}
+      </div>
+      <div className="pagination">
+        <button disabled={currentPage === 1} onClick={() => setCurrentPage((p) => p - 1)}>
+          Zurück
+        </button>
+
+        <span>
+          Seite {currentPage} von {totalPages}
+        </span>
+
+        <button disabled={currentPage === totalPages} onClick={() => setCurrentPage((p) => p + 1)}>
+          Weiter
+        </button>
+      </div>
+    </div>
+  );
 }
 export default Overview;

@@ -1,0 +1,25 @@
+.page-banner {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fefefe;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 3rem;
+    // color: #2a6bfd;
+  }
+  &__sub-title {
+    color: rgb(197, 197, 197);
+    font-weight: 500;
+    font-size: 2rem;
+  }
+}

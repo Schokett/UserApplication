@@ -1,4 +1,4 @@
 function help() {
-  return <div>help</div>;
+  return <div className="page"></div>;
 }
 export default help;
