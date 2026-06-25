@@ -16,6 +16,9 @@
   align-items: center;
 
   &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
   }
   &__title {
     font-weight: 600;

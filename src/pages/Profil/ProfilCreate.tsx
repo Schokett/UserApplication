@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "../../components/input/Input";
 import Select from "../../components/select/Select";
 import "./profilcreate.scss";
+import logo from "../../assets/logo.png";
 
 function ProfilCreate() {
   const [username, setusername] = useState("");
@@ -31,10 +32,10 @@ function ProfilCreate() {
   return (
     <div className="page">
       <div className="page-banner">
-        <img src="" alt="test" />
+        <img src={logo} alt="test" style={{ width: "200px" }} />
         <div className="page-banner__text-wrapper">
-          <p className="page-banner__title">Benutzerprofil</p>
-          <p className="page-banner__sub-title">Erstellen Sie ein Benutzerkonto</p>
+          <span className="page-banner__title">Benutzerprofil</span>
+          <span className="page-banner__sub-title">Erstellen Sie ein Benutzerkonto</span>
         </div>
       </div>
       <div className="create-form">
