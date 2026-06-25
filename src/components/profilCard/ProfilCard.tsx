@@ -1,4 +1,13 @@
 import "./profilCard.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCalendar,
+  faLocationDot,
+  faVenusMars,
+  faPhone,
+  faEnvelope,
+  faGlobe,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface User {
   id: string;
@@ -34,12 +43,36 @@ function ProfilCard({ user, onClick }: ProfilCardProps) {
       <div className="card__info">
         <h4 className="card__username">{user.username}</h4>
         <div className="card__detail-grid">
-          <span className="card__detail">{user.birthDate}</span>
-          <span className="card__detail">{user.address}</span>
-          <span className="card__detail">{user.gender}</span>
-          <span className="card__detail">{user.telefon}</span>
-          <span className="card__detail">{user.email}</span>
-          <span className="card__detail">{user.website}</span>
+          <span className="card__detail">
+            {" "}
+            <FontAwesomeIcon icon={faCalendar} />
+            {user.birthDate}
+          </span>
+          <span className="card__detail">
+            {" "}
+            <FontAwesomeIcon icon={faLocationDot} />
+            {user.address}
+          </span>
+          <span className="card__detail">
+            {" "}
+            <FontAwesomeIcon icon={faVenusMars} />
+            {user.gender}
+          </span>
+          <span className="card__detail">
+            {" "}
+            <FontAwesomeIcon icon={faPhone} />
+            {user.telefon}
+          </span>
+          <span className="card__detail">
+            {" "}
+            <FontAwesomeIcon icon={faEnvelope} />
+            {user.email}
+          </span>
+          <span className="card__detail">
+            {" "}
+            <FontAwesomeIcon icon={faGlobe} />
+            {user.website}
+          </span>
         </div>
       </div>
     </div>
