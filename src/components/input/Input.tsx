@@ -10,6 +10,10 @@ interface InputProps {
 }
 
 function Input({ label, value, onChange, placeholder, type = "text", className }: InputProps) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+    onChange(e.target.value);
+  };
   return (
     <div className={`Input ${className ?? ""}`}>
       {label && <label className="Input__label">{label}</label>}
@@ -18,7 +22,7 @@ function Input({ label, value, onChange, placeholder, type = "text", className }
         type={type}
         value={value}
         placeholder={placeholder}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={handleChange}
       />
     </div>
   );
