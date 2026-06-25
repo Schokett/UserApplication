@@ -4,7 +4,8 @@ import Overview from "./pages/overview/Overview";
 import ProfilEdit from "./pages/Profil/ProfilEdit";
 import ProfilCreate from "./pages/Profil/ProfilCreate";
 import ErrorPage from "./pages/error/ErrorPage";
-import Root from "./pages/root";
+import Help from "./pages/help/Help";
+import Root from "./pages/Root";
 
 function App() {
   const router = createBrowserRouter([
@@ -17,6 +18,7 @@ function App() {
         { path: "Overview", element: <Overview /> },
         { path: "Create", element: <ProfilCreate /> },
         { path: "Edit/:itemId", element: <ProfilEdit /> },
+        { path: "help", element: <Help /> },
       ],
     },
   ]);

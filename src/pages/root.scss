@@ -14,10 +14,13 @@
   height: 100vh;
   flex-direction: column;
   width: 300px;
-  border-radius: 0px 8px 0 0;
   align-items: center;
   padding: 0.5rem;
   background-color: #001c49;
+
+  &__spacer {
+    flex: 1;
+  }
 
   &__logo-container {
     margin-bottom: 2rem;
@@ -36,17 +39,26 @@
     display: flex;
     width: 100%;
     text-decoration: none;
+
+    &.help {
+      border-top: 1px solid rgb(102, 102, 102);
+      margin-top: auto;
+    }
   }
   &__Button {
-    // background-color: transparent;
+    background-color: transparent;
     width: 100%;
     margin: 0.2rem;
     height: 3.5rem;
     border-radius: 8px;
     border: none;
-    // color: white;
+    color: rgb(197, 197, 197);
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
+  }
+  &__app-version {
+    color: rgba(197, 197, 197, 0.5);
+    font-size: 0.9rem;
   }
 }
