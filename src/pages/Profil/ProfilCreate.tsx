@@ -5,6 +5,7 @@ import "./profilCreate.scss";
 import Banner from "../../components/banner/Banner";
 import ImageUpload from "../../components/imageUpload/ImageUpload";
 import toast from "react-hot-toast";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function ProfilCreate() {
   const [username, setusername] = useState("");
@@ -52,7 +53,7 @@ function ProfilCreate() {
 
   return (
     <div className="page">
-      <Banner title="Erstellen" subTitle="Lege einen neuen User an" />
+      <Banner title="Erstellen" subTitle="Lege einen neuen User an" icon={faUser} />
       <div className="formPage">
         <form className="form" onSubmit={handleSubmit} noValidate>
           <Input

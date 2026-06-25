@@ -1,4 +1,6 @@
 import "./banner.scss";
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface DisplayProps {
   title?: string | number;
@@ -6,12 +8,25 @@ interface DisplayProps {
   onDelete?: () => void;
   image?: string;
   imageAlt?: string;
+  username?: string;
+  icon?: IconDefinition;
 }
 
-function Banner({ title, subTitle, onDelete, image, imageAlt }: DisplayProps) {
+function Banner({ title, subTitle, onDelete, image, imageAlt, username, icon }: DisplayProps) {
   return (
     <div className="page-banner">
-      <img className="page-banner__picture" src={image} alt={imageAlt} style={{ width: "200px" }} />
+      {image ? (
+        <img src={image} alt={imageAlt} className="page-banner__picture" />
+      ) : icon ? (
+        <div className="page-banner__icon-wrapper">
+          <FontAwesomeIcon icon={icon} className="page-banner__icon" />
+        </div>
+      ) : (
+        <div className="page-banner__image-placeholder">
+          {username ? username.charAt(0).toUpperCase() : "?"}
+        </div>
+      )}
+
       <div className="page-banner__text-wrapper">
         <span className="page-banner__title">{title}</span>
         <div className="page-banner__action-container">

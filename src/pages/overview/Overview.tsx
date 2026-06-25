@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Banner from "../../components/banner/Banner";
 import ProfilCard from "../../components/profilCard/ProfilCard";
 import "./overview.scss";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 interface User {
   id: string;
@@ -34,7 +35,7 @@ function Overview() {
 
   return (
     <div className="page">
-      <Banner title={users.length} subTitle="Angelegte User" />
+      <Banner title={users.length} subTitle="Angelegte User" icon={faUsers} />
       <div className="profilView-formPage">
         {currentUsers.map((user) => (
           <ProfilCard key={user.id} user={user} onClick={() => navigate(`/Edit/${user.id}`)} />
