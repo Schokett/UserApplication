@@ -2,7 +2,7 @@ import logo from "../../assets/logo.png";
 import "./banner.scss";
 
 interface DisplayProps {
-  title?: string;
+  title?: string | number;
   subTitle?: string;
 }
 

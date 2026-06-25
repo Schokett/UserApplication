@@ -34,7 +34,7 @@ function Overview() {
 
   return (
     <div className="page">
-      <Banner title="128" subTitle="Angelegte User" />
+      <Banner title={users.length} subTitle="Angelegte User" />
       <div className="profilView-formPage">
         {currentUsers.map((user) => (
           <ProfilCard key={user.id} user={user} onClick={() => navigate(`/Edit/${user.id}`)} />
