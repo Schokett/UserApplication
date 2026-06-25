@@ -7,6 +7,44 @@
   grid-template-columns: auto 1fr;
   align-items: center;
 
+  &__picture {
+    width: 112px;
+    height: 112px;
+    min-width: 112px;
+    min-height: 112px;
+    max-width: 112px;
+    max-height: 112px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 2rem;
+  }
+  &__action-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__delete-btn {
+    border-radius: 999px;
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(211, 47, 47, 0.3);
+    transition:
+      background 0.2s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      background: #b71c1c;
+      transform: translateY(-1px);
+    }
+  }
   &__text-wrapper {
     display: flex;
     flex-direction: column;

@@ -11,13 +11,21 @@
   }
 
   &__btn {
-    // grid-column: 1 / -1;
     justify-self: end;
-    border-radius: 28px;
-    background: #0039e6;
-    background: linear-gradient(90deg, rgba(0, 57, 230, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    width: 8rem;
+    height: 48px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #0039e6 0%, #00d4ff 100%);
     color: white;
     border: none;
-    padding: 1rem 3rem;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 57, 230, 0.25);
+    transition: transform 0.15s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
   }
 }

@@ -61,16 +61,36 @@ function ProfilEdit() {
         ? { ...u, username, birthDate, gender, email, address, telefon, website, profileImage }
         : u,
     );
-
     localStorage.setItem("users", JSON.stringify(updatedUsers));
 
     toast.success(`${username} wurde erfolgreich aktualisiert`);
+    navigate("/overview");
+  }; // <-- handleSubmit endet hier
+
+  // handleDelete - eigenständig daneben, NICHT in handleSubmit verschachtelt
+  const handleDelete = () => {
+    const isConfirmed = window.confirm(
+      `Möchtest du ${username} wirklich löschen? Dies kann nicht rückgängig gemacht werden.`,
+    );
+    if (!isConfirmed) return;
+
+    const existingUsers: User[] = JSON.parse(localStorage.getItem("users") || "[]");
+    const updatedUsers = existingUsers.filter((u) => u.id !== id);
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+    toast.success(`${username} wurde gelöscht`);
     navigate("/overview");
   };
 
   return (
     <div className="page">
-      <Banner title="Bearbeiten" subTitle={` aktualisiere ${username}'s daten`} />
+      <Banner
+        image={profileImage ?? undefined}
+        imageAlt="profilbild"
+        title="Bearbeiten"
+        subTitle={` aktualisiere ${username}'s daten`}
+        onDelete={handleDelete}
+      />
       <div className="formPage">
         <form className="form" onSubmit={handleSubmit} noValidate>
           <Input

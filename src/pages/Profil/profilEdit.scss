@@ -9,16 +9,4 @@
   &__full-width {
     grid-column: 1 / -1;
   }
-
-  &__btn {
-    // grid-column: 1 / -1;
-    justify-self: end;
-    border-radius: 28px;
-    background: #0039e6;
-    background: linear-gradient(90deg, rgba(0, 57, 230, 1) 0%, rgba(0, 212, 255, 1) 100%);
-    color: white;
-    border: none;
-    padding: 1rem 3rem;
-    cursor: pointer;
-  }
 }
