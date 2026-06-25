@@ -71,7 +71,7 @@ function ProfilEdit() {
   return (
     <div className="page">
       <Banner title="Bearbeiten" subTitle={` aktualisiere ${username}'s daten`} />
-      <div className="edit-formPage">
+      <div className="formPage">
         <form className="form" onSubmit={handleSubmit} noValidate>
           <Input
             label="Username"

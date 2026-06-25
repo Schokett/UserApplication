@@ -19,3 +19,14 @@ body {
   margin: 2rem;
   height: calc(100% - 4rem);
 }
+.formPage {
+  background-color: #fefefe;
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 10px rgb(235, 235, 235);
+  min-height: 0;
+  overflow: auto;
+}

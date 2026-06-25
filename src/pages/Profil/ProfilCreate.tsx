@@ -53,7 +53,7 @@ function ProfilCreate() {
   return (
     <div className="page">
       <Banner title="Erstellen" subTitle="Lege einen neuen User an" />
-      <div className="create-formPage">
+      <div className="formPage">
         <form className="form" onSubmit={handleSubmit} noValidate>
           <Input
             label="Username"
