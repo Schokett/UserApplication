@@ -6,11 +6,16 @@ import "./overview.scss";
 interface User {
   id: string;
   username: string;
+  birthDate: string;
+  gender: string;
+  email: string;
+  address: string;
+  telefon: string;
+  website: string;
   profileImage: string | null;
-  // ... weitere Felder
 }
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 4;
 
 function Overview() {
   const [users, setUsers] = useState<User[]>([]);
@@ -31,11 +36,9 @@ function Overview() {
     <div className="page">
       <Banner title="128" subTitle="Angelegte User" />
       <div className="profilView-formPage">
-        <div className="user-grid">
-          {currentUsers.map((user) => (
-            <ProfilCard key={user.id} user={user} />
-          ))}
-        </div>
+        {currentUsers.map((user) => (
+          <ProfilCard key={user.id} user={user} />
+        ))}
       </div>
 
       <div className="pagination">

@@ -69,9 +69,9 @@ function ProfilCreate() {
             onChange={setGender}
             placeholder="Geschlecht auswählen"
             options={[
-              { value: "divers", label: "Divers" },
-              { value: "female", label: "Weiblich" },
-              { value: "male", label: "Männlich" },
+              { value: "Divers", label: "Divers" },
+              { value: "Weiblich", label: "Weiblich" },
+              { value: "Männlich", label: "Männlich" },
             ]}
           />
           <Input

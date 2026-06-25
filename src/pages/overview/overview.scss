@@ -5,7 +5,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  width: 100%;
   box-shadow: 2px 4px 10px rgb(235, 235, 235);
   min-height: 0;
-  overflow: auto;
+  overflow: hidden;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+
+  button {
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
 }

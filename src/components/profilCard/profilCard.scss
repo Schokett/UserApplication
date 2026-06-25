@@ -1,7 +1,41 @@
 .card {
   width: auto;
-  height: 170px;
+  max-height: 12rem;
   background-color: #d1d1d1;
   border-radius: 18px;
-  padding: 1rem;
+  display: flex;
+  flex: 1 auto;
+
+  &__username {
+    margin: 1.5rem 0 0 0;
+  }
+
+  &__image-wrapper {
+    align-self: center;
+    margin: 1rem;
+    flex-shrink: 0;
+    width: 154px;
+    height: 154px;
+  }
+
+  &__image {
+    width: 154px;
+    height: 154px;
+    min-width: 154px;
+    min-height: 154px;
+    max-width: 154px;
+    max-height: 154px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
