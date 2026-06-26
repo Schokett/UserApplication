@@ -74,7 +74,7 @@ function ProfilCreate() {
     <div className="page">
       <Banner title="Erstellen" subTitle="Lege einen neuen User an" icon={faUser} />
       <div className="formPage">
-        <form className="form" onSubmit={handleSubmit} noValidate>
+        <form className="form" onSubmit={handleSubmit}>
           <Input
             label="Username*"
             type="text"

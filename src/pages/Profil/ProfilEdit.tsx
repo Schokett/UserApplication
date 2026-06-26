@@ -112,7 +112,7 @@ function ProfilEdit() {
         onDelete={handleDelete}
       />
       <div className="formPage">
-        <form className="form" onSubmit={handleSubmit} noValidate>
+        <form className="form" onSubmit={handleSubmit}>
           <Input
             label="Username*"
             type="text"
