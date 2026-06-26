@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Overview from "./pages/overview/Overview";
-import ProfilEdit from "./pages/Profil/ProfilEdit";
+import ProfilEdit from "./pages/Profil/t";
 import ProfilCreate from "./pages/Profil/ProfilCreate";
 import ErrorPage from "./pages/error/ErrorPage";
 import Help from "./pages/help/Help";
