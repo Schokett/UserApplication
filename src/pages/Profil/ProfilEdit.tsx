@@ -154,7 +154,7 @@ function ProfilEdit() {
             label="Email Adresse"
             type="email"
             value={email}
-            placeholder={"https://webseite.com"}
+            placeholder={"E-Mail Adresse eingeben"}
             onChange={setemail}
             icon={faEnvelope}
             iconColor="#4f7df3"
@@ -174,7 +174,7 @@ function ProfilEdit() {
             label="Webseite"
             type="url"
             value={website}
-            placeholder={"Webseiten eingeben"}
+            placeholder={"https://webseite.com"}
             onChange={setWebsite}
             icon={faGlobe}
             iconColor="#e85a9b"
