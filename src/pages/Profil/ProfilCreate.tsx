@@ -5,8 +5,17 @@ import "./profilCreate.scss";
 import Banner from "../../components/banner/Banner";
 import ImageUpload from "../../components/imageUpload/ImageUpload";
 import toast from "react-hot-toast";
-import { faUser, faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faFloppyDisk,
+  faCalendar,
+  faVenusMars,
+  faEnvelope,
+  faPhone,
+  faGlobe,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 
 function ProfilCreate() {
   const [username, setusername] = useState("");
@@ -76,13 +85,27 @@ function ProfilCreate() {
               if (usernameError) setUsernameError(false);
             }}
             error={usernameError}
+            icon={faUser}
+            iconColor="#4f7df3"
+            iconBg="#e8edfc"
           />
-          <Input label="Geburtsdatum" type="date" value={birthDate} onChange={setBirthDate} />
+          <Input
+            label="Geburtsdatum"
+            type="date"
+            value={birthDate}
+            onChange={setBirthDate}
+            icon={faCalendar}
+            iconColor="#1d9e75"
+            iconBg="#e1f5ee"
+          />
           <Select
             label="Geschlecht"
             value={gender}
             onChange={setGender}
             placeholder="Geschlecht auswählen"
+            icon={faVenusMars}
+            iconColor="#e0a020"
+            iconBg="#fbf0d8"
             options={[
               { value: "Divers", label: "Divers" },
               { value: "Weiblich", label: "Weiblich" },
@@ -95,6 +118,9 @@ function ProfilCreate() {
             value={email}
             placeholder={"E-Mail Adresse eingeben"}
             onChange={setemail}
+            icon={faEnvelope}
+            iconColor="#4f7df3"
+            iconBg="#e8edfc"
           />
           <Input
             label="Telefonnummer"
@@ -102,6 +128,9 @@ function ProfilCreate() {
             value={telefon}
             placeholder={"Telefonnummer eingeben"}
             onChange={setTelefon}
+            icon={faPhone}
+            iconColor="#9b7fe8"
+            iconBg="#f0ecfd"
           />
           <Input
             label="Webseite"
@@ -109,6 +138,9 @@ function ProfilCreate() {
             value={website}
             placeholder={"Webseiten eingeben"}
             onChange={setWebsite}
+            icon={faGlobe}
+            iconColor="#e85a9b"
+            iconBg="#fce8f1"
           />
           <Input
             label="Post Adresse"
@@ -117,6 +149,9 @@ function ProfilCreate() {
             placeholder={"Post Adresse eingeben"}
             onChange={setAddress}
             className="form__full-width"
+            icon={faLocationDot}
+            iconColor="#1d9e75"
+            iconBg="#e1f5ee"
           />
           <div className="form__img-upload">
             <label className="Input__label">Profilbild</label>

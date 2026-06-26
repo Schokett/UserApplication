@@ -1,3 +1,5 @@
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./input.scss";
 
 interface InputProps {
@@ -8,6 +10,9 @@ interface InputProps {
   type?: "text" | "email" | "password" | "number" | "date" | "tel" | "url";
   className?: string;
   error?: boolean;
+  icon?: IconDefinition;
+  iconColor?: string;
+  iconBg?: string;
 }
 
 function Input({
@@ -18,6 +23,9 @@ function Input({
   type = "text",
   className,
   error,
+  icon,
+  iconColor,
+  iconBg,
 }: InputProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
@@ -26,13 +34,22 @@ function Input({
   return (
     <div className={`Input ${className ?? ""}`}>
       {label && <label className="Input__label">{label}</label>}
-      <input
-        className={`Input__field ${error ? "Input__field--error" : ""}`}
-        type={type}
-        value={value}
-        placeholder={placeholder}
-        onChange={handleChange}
-      />
+      <div className="Input__row">
+        {icon && (
+          <div
+            className="Input__icon-wrapper"
+            style={{ background: iconBg, "--icon-color": iconColor } as React.CSSProperties}>
+            <FontAwesomeIcon icon={icon} className="Input__icon" style={{ color: iconColor }} />
+          </div>
+        )}
+        <input
+          className={`Input__field ${error ? "Input__field--error" : ""}`}
+          type={type}
+          value={value}
+          placeholder={placeholder}
+          onChange={handleChange}
+        />
+      </div>
     </div>
   );
 }
