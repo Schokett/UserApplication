@@ -28,7 +28,6 @@ function Input({
   iconBg,
 }: InputProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
     onChange(e.target.value);
   };
   return (
