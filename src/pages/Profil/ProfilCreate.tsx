@@ -136,7 +136,7 @@ function ProfilCreate() {
             label="Webseite"
             type="url"
             value={website}
-            placeholder={"Webseiten eingeben"}
+            placeholder={"https://webseite.com"}
             onChange={setWebsite}
             icon={faGlobe}
             iconColor="#e85a9b"

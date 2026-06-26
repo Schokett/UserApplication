@@ -154,7 +154,7 @@ function ProfilEdit() {
             label="Email Adresse"
             type="email"
             value={email}
-            placeholder={"E-Mail Adresse eingeben"}
+            placeholder={"https://example.com"}
             onChange={setemail}
             icon={faEnvelope}
             iconColor="#4f7df3"
