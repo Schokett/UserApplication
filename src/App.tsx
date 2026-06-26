@@ -8,20 +8,25 @@ import Help from "./pages/help/Help";
 import Root from "./pages/Root";
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Root />,
+        errorElement: <ErrorPage />,
+        children: [
+          { path: "", element: <Overview /> },
+          { path: "Overview", element: <Overview /> },
+          { path: "Create", element: <ProfilCreate /> },
+          { path: "Edit/:id", element: <ProfilEdit /> },
+          { path: "help", element: <Help /> },
+        ],
+      },
+    ],
     {
-      path: "/UserApplication",
-      element: <Root />,
-      errorElement: <ErrorPage />,
-      children: [
-        { path: "", element: <Overview /> },
-        { path: "Overview", element: <Overview /> },
-        { path: "Create", element: <ProfilCreate /> },
-        { path: "Edit/:id", element: <ProfilEdit /> },
-        { path: "help", element: <Help /> },
-      ],
+      basename: "/UserApplication",
     },
-  ]);
+  );
 
   return <RouterProvider router={router} />;
 }

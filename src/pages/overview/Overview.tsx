@@ -38,7 +38,7 @@ function Overview() {
       <Banner title={users.length} subTitle="Angelegte User" icon={faUsers} />
       <div className="profilView-formPage">
         {currentUsers.map((user) => (
-          <ProfilCard key={user.id} user={user} onClick={() => navigate(`../Edit/${user.id}`)} />
+          <ProfilCard key={user.id} user={user} onClick={() => navigate(`/Edit/${user.id}`)} />
         ))}
 
         <div className="profilView-formPage__pagination">

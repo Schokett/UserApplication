@@ -58,7 +58,7 @@ function ProfilEdit() {
       setProfileImage(userToEdit.profileImage);
     } else {
       toast.error("User nicht gefunden");
-      navigate("../overview");
+      navigate("/overview");
     }
   }, [id, navigate]);
 
@@ -84,7 +84,7 @@ function ProfilEdit() {
     localStorage.setItem("users", JSON.stringify(updatedUsers));
 
     toast.success(`${username} wurde erfolgreich aktualisiert`);
-    navigate("../overview");
+    navigate("/overview");
   };
 
   const handleDelete = () => {
@@ -98,7 +98,7 @@ function ProfilEdit() {
     localStorage.setItem("users", JSON.stringify(updatedUsers));
 
     toast.success(`${username} wurde gelöscht`);
-    navigate("../overview");
+    navigate("/overview");
   };
 
   return (
