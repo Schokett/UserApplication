@@ -55,6 +55,10 @@
     flex-shrink: 0;
     margin-right: 2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    @include desktop-smartphone {
+      margin: 0;
+    }
   }
   &__action-container {
     display: flex;
@@ -132,5 +136,9 @@
     font-weight: 600;
     font-size: 2.5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    @include desktop-smartphone {
+      margin: 0;
+    }
   }
 }
