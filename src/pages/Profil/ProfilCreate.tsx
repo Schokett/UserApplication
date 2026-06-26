@@ -28,8 +28,17 @@ function ProfilCreate() {
     setProfileImage(null);
   };
 
+  const [usernameError, setUsernameError] = useState(false);
+
   const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
+
+    if (!username.trim()) {
+      setUsernameError(true);
+      toast.error("Bitte gib einen Benutzernamen ein");
+      return;
+    }
+    setUsernameError(false);
 
     const newUser = {
       id: crypto.randomUUID(),
@@ -57,11 +66,15 @@ function ProfilCreate() {
       <div className="formPage">
         <form className="form" onSubmit={handleSubmit} noValidate>
           <Input
-            label="Username"
+            label="Username*"
             type="text"
             value={username}
             placeholder={"Benutzername eingeben"}
-            onChange={setusername}
+            onChange={(value) => {
+              setusername(value);
+              if (usernameError) setUsernameError(false);
+            }}
+            error={usernameError}
           />
           <Input label="Geburtsdatum" type="date" value={birthDate} onChange={setBirthDate} />
           <Select

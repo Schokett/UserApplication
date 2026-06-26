@@ -15,5 +15,10 @@
     border: 1px solid gray;
     border-radius: 6px;
     width: 100%;
+    transition: border-color 0.2s ease;
+
+    &--error {
+      border-color: #d32f2f;
+    }
   }
 }
