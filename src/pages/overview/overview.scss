@@ -16,6 +16,7 @@
 
   @include desktop-medium() {
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     overflow: scroll;
   }
 

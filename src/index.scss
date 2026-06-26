@@ -18,6 +18,10 @@ body {
   box-sizing: border-box;
   margin: 2rem;
   height: calc(100% - 4rem);
+
+  @include desktop-smartphone {
+    height: auto;
+  }
 }
 .formPage {
   background-color: #fefefe;
