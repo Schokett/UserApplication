@@ -1,7 +1,9 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import "./root.scss";
 import logo from "../assets/logo-light.png";
 import { Toaster } from "react-hot-toast";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTableCells, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 function Root() {
   return (
@@ -10,16 +12,30 @@ function Root() {
         <div className="Navbar__logo-container">
           <img className="Navbar__logo" src={logo} alt="logo" />
         </div>
-        <Link className="Navbar__Link" to="overview">
-          <button className="Navbar__Button">Übersicht</button>
-        </Link>
-        <Link className="Navbar__Link" to="create">
-          <button className="Navbar__Button">Erstellen</button>
-        </Link>
+        <NavLink
+          className={({ isActive }) => `Navbar__Link ${isActive ? "Navbar__Link--active" : ""}`}
+          to="overview">
+          <button className="Navbar__Button">
+            <FontAwesomeIcon icon={faTableCells} className="Navbar__icon" />
+            Übersicht
+          </button>
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => `Navbar__Link ${isActive ? "Navbar__Link--active" : ""}`}
+          to="create">
+          <button className="Navbar__Button">
+            <FontAwesomeIcon icon={faPlus} className="Navbar__icon" />
+            Erstellen
+          </button>
+        </NavLink>
         <div className="Navbar__spacer"></div>
-        <Link className="Navbar__Link help" to="help">
+        <NavLink
+          className={({ isActive }) =>
+            `Navbar__Link help ${isActive ? "Navbar__Link--active" : ""}`
+          }
+          to="help">
           <button className="Navbar__Button help">Hilfe & documentation</button>
-        </Link>
+        </NavLink>
         <span className="Navbar__app-version">version 1.0.0</span>
       </nav>
       <main className="root__main-content">

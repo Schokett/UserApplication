@@ -33,19 +33,45 @@
     max-width: 100%;
     height: auto;
   }
-
+  &__app-version {
+    color: rgba(197, 197, 197, 0.5);
+    font-size: 0.9rem;
+  }
+  &__icon {
+    font-size: 2rem;
+    color: white;
+    &.svg-inline--fa path {
+      fill: white;
+    }
+  }
   &__Link {
     display: flex;
     width: 100%;
     text-decoration: none;
+    border-left: 3px solid transparent;
+    border-radius: 0 8px 8px 0;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
 
     &.help {
       border-top: 1px solid rgb(102, 102, 102);
       margin-top: auto;
     }
+
+    &--active {
+      border-left: 3px solid #3378dd;
+      background-color: rgba(51, 120, 221, 0.15);
+    }
   }
+
   &__Button {
     background-color: transparent;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
     margin: 0.2rem;
     height: 3.5rem;
@@ -54,9 +80,10 @@
     color: rgb(197, 197, 197);
     font-weight: 600;
     cursor: pointer;
+    transition: color 0.2s ease;
   }
-  &__app-version {
-    color: rgba(197, 197, 197, 0.5);
-    font-size: 0.9rem;
+
+  &__Link--active &__Button {
+    color: white;
   }
 }
