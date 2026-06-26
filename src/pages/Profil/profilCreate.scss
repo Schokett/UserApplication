@@ -5,6 +5,11 @@
   align-items: center;
   width: 100%;
   max-width: 900px;
+  height: 100%;
+  @include desktop-medium() {
+    grid-template-columns: 1fr;
+    overflow: scroll;
+  }
 
   &__full-width {
     grid-column: 1 / -1;

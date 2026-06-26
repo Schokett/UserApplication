@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: 0.5rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  overflow-y: auto;
+  overflow-y: visible;
 }
 
 .faq-item {
@@ -50,6 +50,11 @@
   &__search {
     display: flex;
     justify-content: end;
+
+    @include desktop-smartphone {
+      width: 100%;
+      justify-content: center;
+    }
   }
   &__input {
     border: none;
@@ -58,6 +63,10 @@
     border-radius: 6px;
     padding: 0.5rem;
     font-size: 0.8rem;
+
+    @include desktop-smartphone {
+      width: 80%;
+    }
   }
 }
 .storageCapacity-container {
@@ -70,4 +79,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include desktop-smartphone {
+    flex-direction: column;
+  }
 }

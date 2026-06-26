@@ -57,6 +57,10 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 7px 12px;
+
+    @include desktop-small() {
+      grid-template-columns: 1fr;
+    }
   }
   &__detail {
     display: flex;

@@ -32,11 +32,11 @@ function Root() {
         <div className="Navbar__help-container">
           <NavLink
             className={({ isActive }) =>
-              `Navbar__Link help ${isActive ? "Navbar__Link--active" : ""}`
+              `Navbar__Link help  ${isActive ? "Navbar__Link--active" : ""}`
             }
             to="help">
             <button className="Navbar__Button help">
-              <FontAwesomeIcon icon={faInfo} />
+              <FontAwesomeIcon icon={faInfo} className="Navbar__icon help" />
               Hilfe & documentation
             </button>
           </NavLink>

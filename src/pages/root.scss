@@ -4,8 +4,17 @@
   height: 100vh;
   background-color: #e9effc;
 
+  @include desktop-smartphone {
+    flex-direction: column;
+  }
+
   &__main-content {
     width: 100%;
+
+    @include desktop-smartphone {
+      height: calc(100vh - 70px);
+      overflow-y: auto;
+    }
   }
 }
 .Navbar {
@@ -17,13 +26,38 @@
   padding: 0.5rem;
   background-color: #001c49;
 
+  @include desktop-smartphone {
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    order: 2;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  }
+
   &__spacer {
     flex: 1;
+
+    @include desktop-smartphone {
+      display: none;
+    }
   }
 
   &__help-container {
     border-top: 1px solid rgb(102, 102, 102);
     padding: 1rem;
+
+    @include desktop-smartphone {
+      border-top: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
   }
   &__logo-container {
     margin-bottom: 2rem;
@@ -32,6 +66,10 @@
     align-items: center;
     width: 100%;
     overflow: hidden;
+
+    @include desktop-smartphone {
+      display: none;
+    }
   }
   &__logo {
     max-width: 100%;
@@ -40,12 +78,20 @@
   &__app-version {
     color: rgba(197, 197, 197, 0.5);
     font-size: 0.9rem;
+
+    @include desktop-smartphone {
+      display: none;
+    }
   }
   &__icon {
     font-size: 1.8rem;
     color: white;
     &.svg-inline--fa path {
       fill: white;
+    }
+
+    &.help {
+      font-size: 1.5rem;
     }
   }
   &__Link {
@@ -66,6 +112,21 @@
       border-left: 3px solid #3378dd;
       background-color: rgba(51, 120, 221, 0.15);
     }
+
+    @include desktop-smartphone {
+      width: auto;
+      border-left: none;
+      border-radius: 0;
+
+      &.help {
+        margin-top: 0;
+      }
+
+      &--active {
+        border-left: none;
+        background-color: transparent;
+      }
+    }
   }
 
   &__Button {
@@ -84,11 +145,25 @@
     font-weight: 600;
     cursor: pointer;
     transition: color 0.2s ease;
+
+    @include desktop-smartphone {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      justify-items: center;
+      gap: 0.2rem;
+      height: auto;
+      font-size: 0.7rem;
+      margin: 0;
+    }
   }
 
   &__Link--active &__Button {
     color: white;
     grid-template-columns: auto 1fr;
     text-align: center;
+
+    @include desktop-smartphone {
+      grid-template-columns: 1fr;
+    }
   }
 }

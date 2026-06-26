@@ -48,6 +48,10 @@
   &__action-container {
     display: flex;
     justify-content: space-between;
+
+    @include desktop-small() {
+      flex-direction: column;
+    }
   }
   &__delete-btn {
     display: flex;
@@ -65,6 +69,10 @@
     transition:
       background 0.2s ease,
       transform 0.15s ease;
+
+    @include desktop-small() {
+      width: 12rem;
+    }
 
     svg {
       font-size: 1.8rem;
