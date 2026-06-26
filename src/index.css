@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 4px 10px rgb(235, 235, 235);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   min-height: 0;
   overflow: auto;
 }

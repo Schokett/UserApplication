@@ -6,7 +6,7 @@
   height: 100%;
   flex-direction: column;
   gap: 0.5rem;
-  box-shadow: 2px 4px 10px rgb(235, 235, 235);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   overflow-y: auto;
 }
 
@@ -52,8 +52,12 @@
     justify-content: end;
   }
   &__input {
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 15rem;
     border-radius: 6px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 .storageCapacity-container {

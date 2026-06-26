@@ -86,6 +86,7 @@ function ProfilEdit() {
     <div className="page">
       <Banner
         image={profileImage ?? undefined}
+        username={username}
         imageAlt="profilbild"
         title="Bearbeiten"
         subTitle={` aktualisiere ${username}'s daten`}

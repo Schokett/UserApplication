@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
   &__icon-wrapper {
     width: 112px;
@@ -80,5 +81,22 @@
     color: rgb(197, 197, 197);
     font-weight: 500;
     font-size: 2rem;
+  }
+  &__image-placeholder {
+    width: 112px;
+    height: 112px;
+    min-width: 112px;
+    min-height: 112px;
+    border-radius: 50%;
+    background: #c2c2c2;
+    color: #4a4a4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 }
