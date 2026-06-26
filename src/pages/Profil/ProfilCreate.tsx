@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Input from "../../components/input/Input";
 import Select from "../../components/select/Select";
-import "./profilcreate.scss";
+import "./profilCreate.scss";
 import Banner from "../../components/banner/Banner";
 import ImageUpload from "../../components/imageUpload/ImageUpload";
 import toast from "react-hot-toast";
