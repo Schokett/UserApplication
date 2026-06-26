@@ -41,37 +41,39 @@ function ProfilCard({ user, onClick }: ProfilCardProps) {
       </div>
 
       <div className="card__info">
-        <h4 className="card__username">{user.username}</h4>
+        <h4 className="card__username">
+          <span className="card__text">{user.username}</span>
+        </h4>
         <div className="card__detail-grid">
           <span className="card__detail">
             {" "}
             <FontAwesomeIcon icon={faCalendar} />
-            {user.birthDate}
+            <span className="card__text">{user.birthDate}</span>
           </span>
           <span className="card__detail">
             {" "}
             <FontAwesomeIcon icon={faLocationDot} />
-            {user.address}
+            <span className="card__text">{user.address}</span>
           </span>
           <span className="card__detail">
             {" "}
             <FontAwesomeIcon icon={faVenusMars} />
-            {user.gender}
+            <span className="card__text">{user.gender}</span>
           </span>
           <span className="card__detail">
             {" "}
             <FontAwesomeIcon icon={faPhone} />
-            {user.telefon}
+            <span className="card__text">{user.telefon}</span>
           </span>
           <span className="card__detail">
             {" "}
             <FontAwesomeIcon icon={faEnvelope} />
-            {user.email}
+            <span className="card__text">{user.email}</span>
           </span>
           <span className="card__detail">
             {" "}
             <FontAwesomeIcon icon={faGlobe} />
-            {user.website}
+            <span className="card__text">{user.website}</span>
           </span>
         </div>
       </div>

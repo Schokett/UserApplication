@@ -13,6 +13,12 @@
     rgba(122, 122, 122, 0.16) 0px 3px 6px,
     rgba(122, 122, 122, 0.16) 0px 3px 6px;
 
+  @include desktop-smartphone {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
   &__username {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -60,6 +66,7 @@
 
     @include desktop-small() {
       grid-template-columns: 1fr;
+      width: 100%;
     }
   }
   &__detail {
@@ -69,11 +76,11 @@
     font-size: 13px;
     color: #3a3a3a;
     overflow: hidden;
+  }
 
-    span {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+  &__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
