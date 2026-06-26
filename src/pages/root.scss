@@ -40,6 +40,13 @@
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
   }
 
+  &__Link__text {
+    color: rgb(209, 209, 209);
+    @include desktop-smartphone {
+      display: none;
+    }
+  }
+
   &__spacer {
     flex: 1;
 
@@ -111,6 +118,10 @@
     &--active {
       border-left: 3px solid #3378dd;
       background-color: rgba(51, 120, 221, 0.15);
+    }
+
+    &--active &__text {
+      color: white;
     }
 
     @include desktop-smartphone {

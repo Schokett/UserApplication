@@ -17,7 +17,7 @@ function Root() {
           to="overview">
           <button className="Navbar__Button">
             <FontAwesomeIcon icon={faTableCells} className="Navbar__icon" />
-            Übersicht
+            <span className="Navbar__Link__text">Übersicht</span>
           </button>
         </NavLink>
         <NavLink
@@ -25,7 +25,7 @@ function Root() {
           to="create">
           <button className="Navbar__Button">
             <FontAwesomeIcon icon={faPlus} className="Navbar__icon" />
-            Erstellen
+            <span className="Navbar__Link__text">Erstellen</span>
           </button>
         </NavLink>
         <div className="Navbar__spacer"></div>
@@ -37,7 +37,7 @@ function Root() {
             to="help">
             <button className="Navbar__Button help">
               <FontAwesomeIcon icon={faInfo} className="Navbar__icon help" />
-              Hilfe & documentation
+              <span className="Navbar__Link__text">Hilfe & documentation</span>
             </button>
           </NavLink>
         </div>
