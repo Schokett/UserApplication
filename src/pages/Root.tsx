@@ -29,16 +29,18 @@ function Root() {
           </button>
         </NavLink>
         <div className="Navbar__spacer"></div>
-        <NavLink
-          className={({ isActive }) =>
-            `Navbar__Link help ${isActive ? "Navbar__Link--active" : ""}`
-          }
-          to="help">
-          <button className="Navbar__Button help">
-            <FontAwesomeIcon icon={faInfo} className="Navbar__icon" />
-            Hilfe & documentation
-          </button>
-        </NavLink>
+        <div className="Navbar__help-container">
+          <NavLink
+            className={({ isActive }) =>
+              `Navbar__Link help ${isActive ? "Navbar__Link--active" : ""}`
+            }
+            to="help">
+            <button className="Navbar__Button help">
+              <FontAwesomeIcon icon={faInfo} />
+              Hilfe & documentation
+            </button>
+          </NavLink>
+        </div>
         <span className="Navbar__app-version">version 1.0.0</span>
       </nav>
       <main className="root__main-content">
