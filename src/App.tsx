@@ -10,7 +10,7 @@ import Root from "./pages/Root";
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/UserApplication/",
       element: <Root />,
       errorElement: <ErrorPage />,
       children: [
