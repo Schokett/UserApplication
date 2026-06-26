@@ -1,6 +1,7 @@
 import "./banner.scss";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 interface DisplayProps {
   title?: string | number;
@@ -33,6 +34,7 @@ function Banner({ title, subTitle, onDelete, image, imageAlt, username, icon }: 
           <span className="page-banner__sub-title">{subTitle}</span>
           {onDelete && (
             <button className="page-banner__delete-btn" onClick={onDelete} type="button">
+              <FontAwesomeIcon icon={faTrash} />
               User Löschen
             </button>
           )}

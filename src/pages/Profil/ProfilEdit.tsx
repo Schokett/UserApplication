@@ -6,6 +6,8 @@ import ImageUpload from "../../components/imageUpload/ImageUpload";
 import toast from "react-hot-toast";
 import "./profilEdit.scss";
 import { useNavigate, useParams } from "react-router-dom";
+import { faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface User {
   id: string;
@@ -160,6 +162,7 @@ function ProfilEdit() {
             <ImageUpload value={profileImage} onChange={setProfileImage} />
           </div>
           <button className="form__btn" type="submit">
+            <FontAwesomeIcon icon={faFloppyDisk} />
             Speichern
           </button>
         </form>

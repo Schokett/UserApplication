@@ -12,7 +12,11 @@
 
   &__btn {
     justify-self: end;
-    width: 8rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
     height: 48px;
     border-radius: 999px;
     background: linear-gradient(90deg, #0039e6 0%, #00d4ff 100%);
@@ -24,6 +28,13 @@
     box-shadow: 0 2px 8px rgba(0, 57, 230, 0.25);
     transition: transform 0.15s ease;
 
+    svg {
+      font-size: 1.8rem;
+      color: white;
+      &.svg-inline--fa path {
+        fill: white;
+      }
+    }
     &:hover {
       transform: translateY(-1px);
     }

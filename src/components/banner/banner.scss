@@ -50,6 +50,10 @@
     justify-content: space-between;
   }
   &__delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     border-radius: 999px;
     background: #d32f2f;
     color: white;
@@ -61,6 +65,14 @@
     transition:
       background 0.2s ease,
       transform 0.15s ease;
+
+    svg {
+      font-size: 1.8rem;
+      color: white;
+      &.svg-inline--fa path {
+        fill: white;
+      }
+    }
 
     &:hover {
       background: #b71c1c;

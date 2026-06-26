@@ -5,7 +5,8 @@ import "./profilCreate.scss";
 import Banner from "../../components/banner/Banner";
 import ImageUpload from "../../components/imageUpload/ImageUpload";
 import toast from "react-hot-toast";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ProfilCreate() {
   const [username, setusername] = useState("");
@@ -121,7 +122,9 @@ function ProfilCreate() {
             <label className="Input__label">Profilbild</label>
             <ImageUpload value={profileImage} onChange={setProfileImage} />
           </div>
+
           <button className="form__btn" type="submit">
+            <FontAwesomeIcon icon={faFloppyDisk} />
             Speichern
           </button>
         </form>
