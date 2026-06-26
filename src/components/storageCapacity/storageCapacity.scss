@@ -1,0 +1,33 @@
+.storage-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.25rem;
+  font-size: 0.8rem;
+  width: 100%;
+
+  &__label {
+    color: #555;
+    white-space: nowrap;
+  }
+
+  &__bar {
+    flex: 1;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+  }
+
+  &__fill {
+    height: 100%;
+    background: #2ecc71;
+    border-radius: 999px;
+    transition: width 0.3s ease;
+  }
+
+  &__text {
+    color: #555;
+    white-space: nowrap;
+  }
+}

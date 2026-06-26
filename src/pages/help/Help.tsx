@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./help.scss";
+import StorageCapacity from "../../components/storageCapacity/StorageCapacity";
 
 interface FAQItem {
   question: string;
@@ -75,14 +76,19 @@ function Help() {
 
   return (
     <div className="page">
-      <div className="formpage__search">
-        <input
-          className="formpage__input"
-          type="search"
-          placeholder="Suche nach Fragen..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+      <div className="header-container">
+        <div className="storageCapacity-container">
+          <StorageCapacity />
+        </div>
+        <div className="formpage__search">
+          <input
+            className="formpage__input"
+            type="search"
+            placeholder="Suche nach Fragen..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
       </div>
       <div className="help-formPage">
         {filteredFaq.map((item, index) => (
