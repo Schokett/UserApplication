@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
-  faFloppyDisk,
+  faPlus,
   faCalendar,
   faVenusMars,
   faEnvelope,
@@ -159,7 +159,7 @@ function ProfilCreate() {
           </div>
 
           <button className="form__btn" type="submit">
-            <FontAwesomeIcon icon={faFloppyDisk} />
+            <FontAwesomeIcon icon={faPlus} style={{ color: "rgb(255, 255, 255)" }} />
             Speichern
           </button>
         </form>

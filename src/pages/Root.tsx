@@ -9,9 +9,9 @@ function Root() {
   return (
     <div className="root">
       <nav className="Navbar">
-        <div className="Navbar__logo-container">
+        <NavLink to="/" className="Navbar__logo-container">
           <img className="Navbar__logo" src={logo} alt="logo" />
-        </div>
+        </NavLink>
         <NavLink
           className={({ isActive }) => `Navbar__Link ${isActive ? "Navbar__Link--active" : ""}`}
           to="overview">

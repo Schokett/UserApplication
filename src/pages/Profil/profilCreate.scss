@@ -24,17 +24,17 @@
     width: auto;
     height: 48px;
     border-radius: 999px;
-    background: linear-gradient(90deg, #0039e6 0%, #00d4ff 100%);
+    background: $secondary-color;
     color: white;
     border: none;
     padding: 0.75rem 2rem;
     font-weight: 500;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 57, 230, 0.25);
+    box-shadow: 0 2px 6px $secondary-color;
     transition: transform 0.15s ease;
 
     svg {
-      font-size: 1.8rem;
+      font-size: 1rem;
       color: white;
       &.svg-inline--fa path {
         fill: white;
