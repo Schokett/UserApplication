@@ -3,7 +3,7 @@ import "./root.scss";
 import logo from "../assets/logo-light.png";
 import { Toaster } from "react-hot-toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTableCells, faPlus, faInfo } from "@fortawesome/free-solid-svg-icons";
+import { faTableCells, faPlus, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
 function Root() {
   return (
@@ -36,7 +36,11 @@ function Root() {
             }
             to="help">
             <button className="Navbar__Button help">
-              <FontAwesomeIcon icon={faInfo} className="Navbar__icon help" />
+              <FontAwesomeIcon
+                icon={faCircleInfo}
+                className="Navbar__icon help"
+                style={{ color: "rgb(255, 255, 255)" }}
+              />
               <span className="Navbar__Link__text">Hilfe & documentation</span>
             </button>
           </NavLink>

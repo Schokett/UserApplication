@@ -2,6 +2,7 @@ $base-color: #0f1f3d;
 $secondary-color: #2b8fd4;
 $highligt-color: #f0a830;
 $background-color: #f4f6fb;
+$hide-color: #f4f6fb23;
 
 @mixin desktop-medium {
   @media (max-width: 1700px) {
