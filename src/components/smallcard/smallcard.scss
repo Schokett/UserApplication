@@ -1,10 +1,16 @@
 .smallcard {
   background-color: $background-color;
-  border-radius: 8px;
+  border-radius: 18px;
   padding: 2rem;
   width: 100%;
-  height: auto;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  gap: 2rem;
+  &__main-container {
+    background-color: #4f7df3;
+  }
 
   &__icon-container {
     background-color: #e8edfc;
