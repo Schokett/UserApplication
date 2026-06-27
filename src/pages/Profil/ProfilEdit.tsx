@@ -8,7 +8,7 @@ import "./profilEdit.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFloppyDisk,
+  faPlus,
   faUser,
   faCalendar,
   faVenusMars,
@@ -196,7 +196,7 @@ function ProfilEdit() {
             <ImageUpload value={profileImage} onChange={setProfileImage} />
           </div>
           <button className="form__btn" type="submit">
-            <FontAwesomeIcon icon={faFloppyDisk} />
+            <FontAwesomeIcon icon={faPlus} style={{ color: "rgb(255, 255, 255)" }} />
             Speichern
           </button>
         </form>
