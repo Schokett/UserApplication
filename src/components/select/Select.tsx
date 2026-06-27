@@ -36,7 +36,7 @@ function Select({
           <div
             className="Select__icon-wrapper"
             style={{ background: iconBg, "--icon-color": iconColor } as React.CSSProperties}>
-            <FontAwesomeIcon icon={icon} className="Select__icon" style={{ color: iconColor }} />
+            <FontAwesomeIcon icon={icon} className="Select__icon" />
           </div>
         )}
         <select className="Select__field" value={value} onChange={(e) => onChange(e.target.value)}>

@@ -34,10 +34,10 @@ function ProfilEdit() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const [username, setusername] = useState("");
+  const [username, setUsername] = useState("");
   const [birthDate, setBirthDate] = useState("");
   const [gender, setGender] = useState("");
-  const [email, setemail] = useState("");
+  const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [telefon, setTelefon] = useState("");
   const [website, setWebsite] = useState("");
@@ -48,10 +48,10 @@ function ProfilEdit() {
     const userToEdit = existingUsers.find((u) => u.id === id);
 
     if (userToEdit) {
-      setusername(userToEdit.username);
+      setUsername(userToEdit.username);
       setBirthDate(userToEdit.birthDate);
       setGender(userToEdit.gender);
-      setemail(userToEdit.email);
+      setEmail(userToEdit.email);
       setAddress(userToEdit.address);
       setTelefon(userToEdit.telefon);
       setWebsite(userToEdit.website);
@@ -119,7 +119,7 @@ function ProfilEdit() {
             value={username}
             placeholder={"Benutzername eingeben"}
             onChange={(value) => {
-              setusername(value);
+              setUsername(value);
               if (usernameError) setUsernameError(false);
             }}
             error={usernameError}
@@ -155,7 +155,7 @@ function ProfilEdit() {
             type="email"
             value={email}
             placeholder={"E-Mail Adresse eingeben"}
-            onChange={setemail}
+            onChange={setEmail}
             icon={faEnvelope}
             iconColor="#4f7df3"
             iconBg="#e8edfc"

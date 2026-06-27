@@ -38,7 +38,7 @@ function Input({
           <div
             className="Input__icon-wrapper"
             style={{ background: iconBg, "--icon-color": iconColor } as React.CSSProperties}>
-            <FontAwesomeIcon icon={icon} className="Input__icon" style={{ color: iconColor }} />
+            <FontAwesomeIcon icon={icon} className="Input__icon" />
           </div>
         )}
         <input

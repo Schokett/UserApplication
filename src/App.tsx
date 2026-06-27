@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Overview from "./pages/overview/Overview";
+import Welcome from "./pages/welcome/Welcome";
 import ProfilEdit from "./pages/Profil/ProfilEdit";
 import ProfilCreate from "./pages/Profil/ProfilCreate";
 import ErrorPage from "./pages/error/ErrorPage";
@@ -15,6 +16,7 @@ function App() {
         element: <Root />,
         errorElement: <ErrorPage />,
         children: [
+          { path: "/", element: <Welcome /> },
           { path: "Overview", element: <Overview /> },
           { path: "Create", element: <ProfilCreate /> },
           { path: "Edit/:id", element: <ProfilEdit /> },
