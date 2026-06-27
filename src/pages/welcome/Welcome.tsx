@@ -1,38 +1,48 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTableCells, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faBorderAll, faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./welcome.scss";
 import { NavLink } from "react-router-dom";
 
 function Welcome() {
   return (
     <div className="page">
-      <div className="welcome-formPage">
-        <span className="welcome__eyebrow">Willkommen auf UserApplication</span>
-        <h1 className="welcome__title">
+      <div className="hero">
+        <span className="hero__eyebrow">
+          <div className="hero__eyebrow-circle"></div>Willkommen
+        </span>
+        <h1 className="hero__title">
           Verwalte deine Nutzer.
           <br />
-          Übersichtlich. Schnell. Sicher.
+          <span>Übersichtlich. Schnell. Sicher.</span>
         </h1>
-        <p className="welcome__subtitle">
-          Behalte den Überblick über alle Accounts oder lege in wenigen Sekunden einen neuen Nutzer
-          an.
+        <p className="hero__subtitle">
+          Behalte den Überblick über alle Accounts oder lege in wenigen <br /> Sekunden einen neuen
+          Nutzer an.
         </p>
-
-        <div className="welcome__actions">
-          <NavLink to="overview">
-            <button className="welcome__Button">
-              <FontAwesomeIcon icon={faTableCells} className="welcome__Button__icon" />
-              <span className="welcome__text">Übersicht</span>
+        <div className="hero__actions">
+          <NavLink to="create">
+            <button className="hero__button">
+              <FontAwesomeIcon
+                icon={faPlus}
+                className="hero__button-icon"
+                style={{ color: "rgb(255, 255, 255)" }}
+              />
+              <span className="hero__text">Nutzer erstellen</span>
             </button>
           </NavLink>
-          <NavLink to="create">
-            <button className="welcome__Button">
-              <FontAwesomeIcon icon={faPlus} className="welcome__Button__icon" />
-              <span className="welcome__text">Erstellen</span>
+          <NavLink to="overview">
+            <button className="hero__button transparent">
+              <FontAwesomeIcon
+                icon={faBorderAll}
+                className="hero__button-icon transparent"
+                style={{ color: "rgb(255, 255, 255)" }}
+              />
+              <span className="hero__text transparent">Zur Übersicht</span>
             </button>
           </NavLink>
         </div>
       </div>
+      <div className="welcome-formPage"></div>
     </div>
   );
 }
