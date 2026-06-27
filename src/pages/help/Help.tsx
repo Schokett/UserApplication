@@ -47,12 +47,12 @@ const faqData: FAQItem[] = [
   {
     question: "Kann ich einen Benutzer wieder löschen?",
     answer:
-      "Ja, du kannst angelegte Benutzer jederzeit wieder löschen. Die Daten werden dabei dauerhaft aus dem localStorage entfernt und können nicht wiederhergestellt werden.",
+      "Ja, du kannst angelegte Benutzer jederzeit wieder im bearbeiten tab löschen. Die Daten werden dabei dauerhaft aus dem localStorage entfernt und können nicht wiederhergestellt werden.",
   },
   {
     question: "Sind alle Felder beim Anlegen eines Benutzers Pflichtfelder?",
     answer:
-      "Aktuell sind alle Felder optional – du kannst ein Profil auch mit unvollständigen Angaben speichern. Du kannst die Daten jederzeit später über die Bearbeiten-Funktion ergänzen.",
+      "Aktuell sind alle Felder außer das 'username' Feld optional – du kannst ein Profil auch mit unvollständigen Angaben speichern. Du kannst die Daten jederzeit später über die Bearbeiten-Funktion ergänzen.",
   },
   {
     question: "Sind meine Daten sicher bzw. wer hat Zugriff darauf?",
