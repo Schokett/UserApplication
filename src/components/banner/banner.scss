@@ -77,7 +77,7 @@
     justify-content: center;
     gap: 1rem;
     border-radius: 999px;
-    background: #d32f2f;
+    background: $highligt-color;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -101,7 +101,7 @@
     }
 
     &:hover {
-      background: #b71c1c;
+      filter: brightness(90%);
       transform: translateY(-1px);
     }
   }

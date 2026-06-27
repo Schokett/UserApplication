@@ -41,6 +41,7 @@
       }
     }
     &:hover {
+      filter: brightness(90%);
       transform: translateY(-1px);
     }
   }
