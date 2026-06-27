@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBorderAll, faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./welcome.scss";
 import { NavLink } from "react-router-dom";
+import SmallCard from "../../components/smallcard/SmallCard";
 
 function Welcome() {
   return (
@@ -42,7 +43,14 @@ function Welcome() {
           </NavLink>
         </div>
       </div>
-      <div className="welcome-formPage"></div>
+      <div className="welcome">
+        <div className="welcome__container">
+          <SmallCard />
+          <SmallCard />
+          <SmallCard />
+          <SmallCard />
+        </div>
+      </div>
     </div>
   );
 }

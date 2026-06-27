@@ -1,18 +1,13 @@
-.welcome-formPage {
-  background-color: #fefefe;
-  border-radius: 8px;
-  padding: 2rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  height: 50rem;
+.welcome {
   width: 100%;
-  flex-direction: column;
-  gap: 0.5rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  overflow-y: visible;
-  margin: 0 auto;
+  display: flex;
+  height: auto;
+  gap: 1rem;
+  &__container {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+  }
 }
 
 .hero {

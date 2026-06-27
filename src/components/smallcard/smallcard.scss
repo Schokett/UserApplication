@@ -1,0 +1,23 @@
+.smallcard {
+  background-color: $background-color;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  height: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  &__icon-container {
+    background-color: #e8edfc;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  &__icon {
+    &.svg-inline--fa path {
+      fill: #4f7df3;
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
