@@ -7,6 +7,7 @@ import ProfilCreate from "./pages/Profil/ProfilCreate";
 import ErrorPage from "./pages/error/ErrorPage";
 import Help from "./pages/help/Help";
 import Root from "./pages/Root";
+import ActivityLog from "./pages/activitylog/ActivityLog";
 
 function App() {
   const router = createBrowserRouter(
@@ -21,6 +22,7 @@ function App() {
           { path: "create", element: <ProfilCreate /> },
           { path: "edit/:id", element: <ProfilEdit /> },
           { path: "help", element: <Help /> },
+          { path: "activity", element: <ActivityLog /> },
         ],
       },
     ],

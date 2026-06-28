@@ -18,12 +18,29 @@ interface User {
   profileImage: string | null;
 }
 
+const avatarColors = [
+  { bg: "#dde7ff", text: "#4f7df3" },
+  { bg: "#fde8d8", text: "#e8722a" },
+  { bg: "#d8f5e1", text: "#2ab060" },
+  { bg: "#f0d8fd", text: "#a42ae8" },
+];
+
+const mockTimes = ["vor 12 Min.", "vor 1 Std.", "vor 3 Std.", "Gestern"];
+
+function getInitials(username: string): string {
+  const parts = username.trim().split(" ");
+  if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase();
+  return username.substring(0, 2).toUpperCase();
+}
+
 function Welcome() {
   const [users, setUsers] = useState<User[]>([]);
   useEffect(() => {
     const storedUsers = JSON.parse(localStorage.getItem("users") || "[]");
     setUsers(storedUsers);
   }, []);
+
+  const recentUsers = [...users].slice(-3).reverse();
   return (
     <div className="page">
       <div className="hero">
@@ -95,8 +112,30 @@ function Welcome() {
         </div>
       </div>
       <div className="welcome__container-medium">
-        <p>Letzte Aktivität</p>
-        <p>Alles anzeigen</p>
+        <div className="activity">
+          <div className="activity__header">
+            <span className="activity__title">Letzte Aktivität</span>
+            <NavLink to="activity" className="activity__link">
+              Alles anzeigen
+            </NavLink>
+          </div>
+          {recentUsers.map((user, index) => (
+            <div className="activity__item" key={user.id}>
+              <div
+                className="activity__avatar"
+                style={{
+                  backgroundColor: avatarColors[index % avatarColors.length].bg,
+                  color: avatarColors[index % avatarColors.length].text,
+                }}>
+                {getInitials(user.username)}
+              </div>
+              <span className="activity__info">
+                <span className="activity__name">{user.username}</span> wurde als Nutzer angelegt
+              </span>
+              <span className="activity__time">{mockTimes[index]}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -7,10 +7,79 @@
     display: flex;
     gap: 1rem;
     width: 100%;
+
+    @include desktop-smartphone {
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__container-medium {
     display: flex;
-    background-color: aquamarine;
+    background-color: $background-color;
+    border-radius: 18px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 2rem;
+  }
+}
+
+.activity {
+  width: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  &__link {
+    color: $secondary-color;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #57575723;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    flex: 1;
+    font-size: 0.9rem;
+  }
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__time {
+    font-size: 0.875rem;
+    color: $secendary-text-color;
+    white-space: nowrap;
   }
 }
 

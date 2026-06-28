@@ -32,5 +32,14 @@
   &__top {
     display: flex;
     justify-content: space-between;
+
+    @include desktop-smartphone {
+      justify-content: center;
+    }
+  }
+  &__main-container {
+    @include desktop-smartphone {
+      text-align: center;
+    }
   }
 }
