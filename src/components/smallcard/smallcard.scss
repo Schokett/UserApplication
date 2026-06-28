@@ -8,8 +8,15 @@
   flex-direction: column;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   gap: 2rem;
-  &__main-container {
-    background-color: #4f7df3;
+
+  &__content {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  &__subContent {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $secendary-text-color;
   }
 
   &__icon-container {

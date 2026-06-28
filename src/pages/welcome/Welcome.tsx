@@ -51,6 +51,7 @@ function Welcome() {
           <SmallCard />
         </div>
       </div>
+      <div className="welcome__container-medium">Test</div>
     </div>
   );
 }

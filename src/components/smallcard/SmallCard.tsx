@@ -12,6 +12,11 @@ interface ContentProps {
 }
 
 // Ich wollte die smallcard function dynmaisch umschreiben.-
+// 1.Prozent / Fortschritt über färben icon
+// 2.Prozent / Fortschritt über färben text
+// 3.content automatisch
+// 4.Subcontent übergeben
+// 5. icon neu setzten können
 // upnote://x-callback-url/openNote?noteId=019f0ab5-d509-721d-a32f-5e912edd0696
 
 // function SmallCard({ clasName, icon, iconBg, iconColor, content, subtitle }: ContentProps){
@@ -27,13 +32,13 @@ function SmallCard() {
           <FontAwesomeIcon icon={faUserGroup} className="smallcard__icon" />
         </div>
         <div className="smallcard__procent">
-          <span className="smallcard__icon-procent"></span> <FontAwesomeIcon icon={faCaretUp} />
+          <FontAwesomeIcon icon={faCaretUp} className="smallcard_icon-procent" />
           4,2%
         </div>
       </div>
       <div className="smallcard__main-container">
         <div className="smallcard__content">1.247</div>
-        <div className="smallcard__content">Nutzer gesamt</div>
+        <div className="smallcard__subContent">Nutzer gesamt</div>
       </div>
     </div>
   );
