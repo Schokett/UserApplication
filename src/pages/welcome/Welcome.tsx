@@ -3,7 +3,7 @@ import { faBorderAll, faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./welcome.scss";
 import { NavLink } from "react-router-dom";
 import SmallCard from "../../components/smallcard/SmallCard";
-import { faCaretUp, faImage, faCircleCheck, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faUsers, faImage, faCircleCheck, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
 interface User {
@@ -42,7 +42,7 @@ function Welcome() {
 
   const recentUsers = [...users].slice(-3).reverse();
   return (
-    <div className="page">
+    <div className="page welcome">
       <div className="hero">
         <span className="hero__eyebrow">
           <div className="hero__eyebrow-circle"></div>Willkommen
@@ -82,7 +82,7 @@ function Welcome() {
       <div className="welcome">
         <div className="welcome__container">
           <SmallCard
-            icon={faCaretUp}
+            icon={faUsers}
             iconBg="#dde7ff"
             iconColor="#4f7df3"
             content={users.length}
