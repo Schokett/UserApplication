@@ -17,9 +17,9 @@ function App() {
         errorElement: <ErrorPage />,
         children: [
           { path: "/", element: <Welcome /> },
-          { path: "Overview", element: <Overview /> },
-          { path: "Create", element: <ProfilCreate /> },
-          { path: "Edit/:id", element: <ProfilEdit /> },
+          { path: "overview", element: <Overview /> },
+          { path: "create", element: <ProfilCreate /> },
+          { path: "edit/:id", element: <ProfilEdit /> },
           { path: "help", element: <Help /> },
         ],
       },

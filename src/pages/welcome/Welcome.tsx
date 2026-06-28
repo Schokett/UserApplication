@@ -3,8 +3,16 @@ import { faBorderAll, faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./welcome.scss";
 import { NavLink } from "react-router-dom";
 import SmallCard from "../../components/smallcard/SmallCard";
+import { faCaretUp, faImage, faCircleCheck, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
 function Welcome() {
+  const [users, setUsers] = useState<User[]>([]);
+  useEffect(() => {
+    const storedUsers = JSON.parse(localStorage.getItem("users") || "[]");
+    setUsers(storedUsers);
+  }, []);
+  const [wert, setWert] = useState(1.24);
   return (
     <div className="page">
       <div className="hero">
@@ -45,10 +53,34 @@ function Welcome() {
       </div>
       <div className="welcome">
         <div className="welcome__container">
-          <SmallCard />
-          <SmallCard />
-          <SmallCard />
-          <SmallCard />
+          <SmallCard
+            icon={faCaretUp}
+            iconBg="#dde7ff"
+            iconColor="#4f7df3"
+            content={users.length}
+            subtitle="Nutzer gesamt"
+          />
+          <SmallCard
+            icon={faImage}
+            iconBg="#fde8d8"
+            iconColor="#e8722a"
+            content={users.filter((u) => u.profileImage).length}
+            subtitle="Mit Profilbild"
+          />
+          <SmallCard
+            icon={faCircleCheck}
+            iconBg="#d8f5e1"
+            iconColor="#2ab060"
+            content={users.filter((u) => u.username && u.email && u.birthDate).length}
+            subtitle="Vollständige Profile"
+          />
+          <SmallCard
+            icon={faGlobe}
+            iconBg="#f0d8fd"
+            iconColor="#a42ae8"
+            content={users.filter((u) => u.website).length}
+            subtitle="Mit Website"
+          />
         </div>
       </div>
       <div className="welcome__container-medium">Test</div>
