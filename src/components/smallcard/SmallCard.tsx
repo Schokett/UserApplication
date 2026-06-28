@@ -10,7 +10,7 @@ interface ContentProps {
   subtitle?: string;
 }
 
-function SmallCard({ icon, iconBg, iconColor, content, subtitle, value }: ContentProps) {
+function SmallCard({ icon, iconBg, iconColor, content, subtitle }: ContentProps) {
   return (
     <div className="smallcard">
       <div className="smallcard__top">
