@@ -6,13 +6,24 @@ import SmallCard from "../../components/smallcard/SmallCard";
 import { faCaretUp, faImage, faCircleCheck, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
+interface User {
+  id: string;
+  username: string;
+  birthDate: string;
+  gender: string;
+  email: string;
+  address: string;
+  telefon: string;
+  website: string;
+  profileImage: string | null;
+}
+
 function Welcome() {
   const [users, setUsers] = useState<User[]>([]);
   useEffect(() => {
     const storedUsers = JSON.parse(localStorage.getItem("users") || "[]");
     setUsers(storedUsers);
   }, []);
-  const [wert, setWert] = useState(1.24);
   return (
     <div className="page">
       <div className="hero">
@@ -83,7 +94,10 @@ function Welcome() {
           />
         </div>
       </div>
-      <div className="welcome__container-medium">Test</div>
+      <div className="welcome__container-medium">
+        <p>Letzte Aktivität</p>
+        <p>Alles anzeigen</p>
+      </div>
     </div>
   );
 }
