@@ -4,6 +4,7 @@ import { useRef } from "react";
 interface ImageUploadProps {
   value: string | null;
   onChange: (base64: string) => void;
+  onClear?: () => void;
 }
 
 const MAX_DIMENSION = 400;
@@ -51,7 +52,7 @@ function resizeImage(file: File): Promise<string> {
   });
 }
 
-function ImageUpload({ value, onChange }: ImageUploadProps) {
+function ImageUpload({ value, onChange, onClear }: ImageUploadProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -68,11 +69,18 @@ function ImageUpload({ value, onChange }: ImageUploadProps) {
   return (
     <div className="upload">
       {value && (
-        <img
-          src={value}
-          alt="Profilbild"
-          style={{ width: "64px", height: "64px", borderRadius: "50%", objectFit: "cover" }}
-        />
+        <div className="upload__preview">
+          <img
+            src={value}
+            alt="Profilbild"
+            style={{ width: "64px", height: "64px", borderRadius: "50%", objectFit: "cover" }}
+          />
+          {onClear && (
+            <button type="button" className="upload__clear" onClick={onClear} aria-label="Bild entfernen">
+              ×
+            </button>
+          )}
+        </div>
       )}
       <div className="form__image-meta">
         <button type="button" className="upload__btn" onClick={() => fileInputRef.current?.click()}>

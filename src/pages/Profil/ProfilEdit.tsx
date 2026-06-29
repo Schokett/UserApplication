@@ -193,7 +193,11 @@ function ProfilEdit() {
           />
           <div className="form__img-upload">
             <label className="Input__label">Profilbild</label>
-            <ImageUpload value={profileImage} onChange={setProfileImage} />
+            <ImageUpload
+              value={profileImage}
+              onChange={setProfileImage}
+              onClear={() => setProfileImage(null)}
+            />
           </div>
           <button className="form__btn" type="submit">
             <FontAwesomeIcon icon={faPlus} style={{ color: "rgb(255, 255, 255)" }} />
