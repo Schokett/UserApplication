@@ -12,11 +12,19 @@
   box-shadow:
     rgba(122, 122, 122, 0.16) 0px 3px 6px,
     rgba(122, 122, 122, 0.16) 0px 3px 6px;
+  transition: all 0.2s ease-in-out;
 
   @include desktop-smartphone {
     display: flex;
     flex-direction: column;
     gap: 0;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      rgba(122, 122, 122, 0.16) 0px 5px 8px,
+      rgba(122, 122, 122, 0.16) 0px 5px 8px;
   }
 
   &__username {
